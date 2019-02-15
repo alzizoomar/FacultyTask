@@ -1,0 +1,27 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" *ngFor="let li of students; let i = index" [attr.data-slide-to]="i" [ngClass]="{'active' : i == 0}"></li>
+      
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let student of students; let i = index" [ngClass]="{'active' : i == 0}">
+        <div class="card center-block" >
+          <img [src]="student.value.imageUrl" class="card-img-top rounded" alt="std">
+          <div class="card-body">
+            <h5 class="card-title">{{student.value.name}}</h5>
+            <p class="card-text">Date Of Birth: {{student.value.dateOfBirth}}</p>
+            <p class="card-text">Faculty: {{student.value.faculty}}</p>
+            <a [routerLink]="['/student_details/', student.key]" class="btn btn-primary">Student Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>

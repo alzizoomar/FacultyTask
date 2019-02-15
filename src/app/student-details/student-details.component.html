@@ -1,0 +1,26 @@
+<div class="container">
+  <h4 class="header text-center">Student Details</h4>
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img [src]="student.imageUrl" class="card-img-top" alt="{{student.name}}">
+            <div class="card-body">
+              <h5 class="card-text text-center">{{student.name}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+      <ul>
+        <li>- Faculty: {{student.faculty}}</li>
+        <li>- Phone: {{student.phone}}</li>
+        <li>- Date Of Birth: {{student.dateOfBirth}}</li>
+        <li>- Address: {{student.address}}</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <a [routerLink]="['/student_edit/', id]" class="btn btn-primary d-block">Edit</a>
+      <a (click)="delete()" class="btn btn-danger d-block">Delete</a>
+    </div>
+  </div>
+</div>
+

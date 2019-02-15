@@ -1,0 +1,12 @@
+@media (min-width: 0){
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+
